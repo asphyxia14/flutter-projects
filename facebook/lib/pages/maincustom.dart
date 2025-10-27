@@ -14,7 +14,7 @@ class MainCustomPage extends StatefulWidget {
 }
 
 class _MainCustomPageState extends State<MainCustomPage> {
-  int selectedIndex = 0;
+  int selectedIndex = 4;
 
   List pages = const[
     Newsfeed(),
@@ -49,7 +49,7 @@ class _MainCustomPageState extends State<MainCustomPage> {
             BottomNavigationBarItem(icon: Icon(Icons.person, color: Colors.black), label: "Friends"),
             BottomNavigationBarItem(icon: Icon(Icons.ondemand_video, color: Colors.black), label: "Reels"),
             BottomNavigationBarItem(icon: Icon(Icons.local_convenience_store_rounded, color: Colors.black), label: "Market"),
-            BottomNavigationBarItem(icon: Icon(Icons.menu, color: Colors.black), label: "Notifications"),
+            BottomNavigationBarItem(icon: Icon(Icons.notifications, color: Colors.black), label: "Notifications"),
             BottomNavigationBarItem(icon: CircleAvatar(backgroundImage: AssetImage("assets/profile/prof4.jpg")), label: "Menu"),
           ],
         ),
