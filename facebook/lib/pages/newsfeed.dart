@@ -1,5 +1,6 @@
 import 'package:facebook/model/story_model.dart';
 import 'package:facebook/widgets/createpost.dart';
+import 'package:facebook/widgets/newsfeed_post.dart';
 import 'package:facebook/widgets/storieslist.dart';
 import 'package:flutter/material.dart';
 
@@ -66,13 +67,31 @@ class _NewsfeedState extends State<Newsfeed> {
           DrawerButton(),
         ],
       ),
-      body: Column(children: [
-          const Createpost(),
-          StoriesList(
-            stories: stories,
-            onStoryTap: (story) {},
-          ),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Createpost(),
+            StoriesList(
+              stories: stories,
+              onStoryTap: (story) {},
+            ),
+            NewsFeedPost(
+              name: "John Doe",
+              caption: "This is a sample caption for John's post.",
+              imageurl: "assets/myday/myday1.jpg",
+            ),
+            NewsFeedPost(
+              name: "Jane Doe",
+              caption: "This is a sample caption for John's post.",
+              imageurl: "assets/myday/myday1.jpg",
+            ),
+            NewsFeedPost(
+              name: "Juan Perez",
+              caption: "This is a sample caption for John's post.",
+              imageurl: "assets/myday/myday1.jpg",
+            ),
+          ],
+        ),
       ),
     );
   }

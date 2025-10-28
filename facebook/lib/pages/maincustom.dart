@@ -14,7 +14,7 @@ class MainCustomPage extends StatefulWidget {
 }
 
 class _MainCustomPageState extends State<MainCustomPage> {
-  int selectedIndex = 4;
+  int selectedIndex = 0;
 
   List pages = const[
     Newsfeed(),
